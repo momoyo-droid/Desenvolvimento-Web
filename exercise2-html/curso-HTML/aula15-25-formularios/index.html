@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="5"> Atualiza a pagina a cada 5 segundos -->
+    <title>Conhecendo Formulários</title>
+</head>
+
+<body> <!-- Aula 15 + Aula 16: Formulários, Required, Autofocues, Disabled -->
+    <h1> Aprendendo sobre Formulários</h1>
+    <form id="form-cadastro" action="cadastro.php" method="GET">
+        <fieldset>
+            <legend> Personal Information </legend>
+            Username:<br>
+            <input type="text" name="Username" required autofocus maxlength="30"><br>
+            Password:<br>
+            <input type="password" name="Password" required autofocus maxlength="8"><br><br>
+            <!-- Aula 17 + Aula 19: Email, Radio, Checkbox, Autocomplete, Placeholder -->
+            E-mail:<br>
+            <input type="email" name="email" autocomplete="on" placeholder="email@.com" required><br>
+            <!-- Aula 20: File, Hidden, Search, URL, Tel -->
+            Imagem:<br><br>
+            <input type="file" name="imagem"><br><br>
+            <input type="hidden" name="id"><br><br>
+            Data:<br> <!-- Aula 21: Date, Time, Month, Week, DateTime Local -->
+            <input type="date" name="data" min="1970-12-31" max="2023-03-25"><br><br>
+            Hora:<br>
+            <input type="time" name="hora"><br><br>
+            Mês e ano:<br>
+            <input type="month" name="mes-ano"><br><br>
+            Semana:<br>
+            <input type="week" name="semana"><br><br>
+            Data e Hora:<br>
+            <input type="datetime-local" name="data-hora"><br><br>
+            URL:<br>
+            <input type="url" name="site"><br><br>
+            Search:<br>
+            <input type="search" name="pesquisa"><br>
+            Telefone:<br>
+            <input type="tel" name="telefone"><br>
+            Curso:<br>
+            <input type="radio" name="curso" value="BCC" checked>BCC<br>
+            <input type="radio" name="curso" value="BSI" checked>BSI<br>
+            <input type="radio" name="curso" value="BCD" checked>BCD<br>
+            Turno:<br>
+            <input type="checkbox" name="turno" value="noturno" checked>Noturno<br>
+            <input type="checkbox" name="turno" value="matutino">Matutino<br>
+            <input type="checkbox" name="turno" value="integral" checked>Integral<br>
+            <input type="checkbox" name="turno" value="vespertino" checked>Vespertino<br>
+            <!-- Aula 18: Number, Range, Color -->
+            Quantidade:<br>
+            <input type="number" name="quantidade" min="0" max="100" step="10">
+            <br><br>
+            <input type="range" name="quantidade"><br>
+            Cor: <br>
+            <input type="color" name="cor"><br>
+            <!-- Aula 22: Textarea, Spellcheck, Button -->
+            Mensagem:<br>
+            <textarea name="mensagem" rows="5" cols="30" spellcheck="true"></textarea><br>
+            <button type="button">Clique aqui</button><br><br>
+            Escolha seu filme de animação favorito e personagem:<br><br>
+            <select name="filme-animacao"> <!-- Aula 23: Select -->
+                <optgroup label="Filmes">
+                    <option value="Shrek">Shrek</option>
+                    <option value="Procurando Nemo">Procurando Nemo</option>
+                    <option value="Tá dando onda">Tá dando onda</option>
+                </optgroup>
+
+                <optgroup label="Personagens">
+                    <option value="Mickey Mouse">Mickey Mouse</option>
+                    <option value="Dora Aventureira">Dora Aventureira</option>
+                    <option value="Ursinho Pooh">Ursinho Pooh</option>
+                </optgroup>
+
+            </select><br><br><!-- Aula 24: Datalist -->
+            Escolha um personagem do folclore brasileiro:<br>
+            <input name="personagem" list="lista-personagem">
+            <datalist id="lista-personagem">
+                <option value="Curupira">
+                <option value="Saci-perere">
+                <option value="Cuca">
+                <option value="Mula-sem-cabeça">
+            </datalist>
+            <input type="submit" name="btn-send" value="Submit"><br><br>
+            Campo Desabilitado:<br>
+            <input type="text" name="CampoDesabilitado" disabled>
+        </fieldset>
+        Dois-botões:<br><br> <!-- Aula 25 -->
+        <input type="submit" name="cadastrar" formenctype="application/x-www-form-urlencoded" formmethod="GET" formaction="cadastrar.html" value="Cadastrar"><br><br>
+        <input type="submit" name="enviar-por-email" formmethod="POST" formaction="enviar-email.php" value="Enviar por Email" formnovalidate><br><br>
+    </form>
+    <!-- Aula 25: Form, Formaction, FormMethod, Formenctype, Formnovalidate-->
+    Relacionado com o formulário:<br>
+    <input type="text" name="rel" form="form-cadastro">
+</body>
+
+</html>

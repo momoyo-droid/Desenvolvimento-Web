@@ -1,0 +1,84 @@
+PUT https://httpbin.org/anything: {
+  "Network": {
+    "addresses": {
+      "local": {
+        "address": "172.26.136.135",
+        "family": "IPv4",
+        "port": 48658
+      },
+      "remote": {
+        "address": "34.193.132.77",
+        "family": "IPv4",
+        "port": 443
+      }
+    },
+    "tls": {
+      "reused": false,
+      "authorized": true,
+      "authorizationError": null,
+      "cipher": {
+        "name": "ECDHE-RSA-AES128-GCM-SHA256",
+        "standardName": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+        "version": "TLSv1/SSLv3"
+      },
+      "protocol": "TLSv1.2",
+      "ephemeralKeyInfo": {},
+      "peerCertificate": {
+        "subject": {
+          "commonName": "httpbin.org",
+          "alternativeNames": "DNS:httpbin.org, DNS:*.httpbin.org"
+        },
+        "issuer": {
+          "country": "US",
+          "organization": "Amazon",
+          "commonName": "Amazon RSA 2048 M02"
+        },
+        "validFrom": "Mar  1 00:00:00 2023 GMT",
+        "validTo": "Nov 19 23:59:59 2023 GMT",
+        "fingerprint": "22:6E:AC:E3:C9:9C:47:AF:D4:53:CE:CC:A4:EC:F0:A2:E5:30:D7:62",
+        "serialNumber": "04c69744e59e63942cf626f0c6d7ac54"
+      }
+    }
+  },
+  "Request Headers": {
+    "user-agent": "PostmanRuntime/7.31.1",
+    "accept": "*/*",
+    "cache-control": "no-cache",
+    "postman-token": "ccc863f1-453c-477b-8a4c-ba6fdf41d556",
+    "host": "httpbin.org",
+    "accept-encoding": "gzip, deflate, br",
+    "connection": "keep-alive",
+    "content-length": "0"
+  },
+  "Request Body": "",
+  "Response Headers": {
+    "date": "Wed, 29 Mar 2023 11:36:36 GMT",
+    "content-type": "application/json",
+    "content-length": "523",
+    "connection": "keep-alive",
+    "server": "gunicorn/19.9.0",
+    "access-control-allow-origin": "*",
+    "access-control-allow-credentials": "true"
+  },
+  "Response Body": 
+    {
+    "args": {}, 
+    "data": "", 
+    "files": {}, 
+    "form": {}, 
+    "headers": {
+        "Accept": "*/*", 
+        "Accept-Encoding": "gzip, deflate, br", 
+        "Cache-Control": "no-cache", 
+        "Content-Length": "0", 
+        "Host": "httpbin.org", 
+        "Postman-Token": "ccc863f1-453c-477b-8a4c-ba6fdf41d556", 
+        "User-Agent": "PostmanRuntime/7.31.1", 
+        "X-Amzn-Trace-Id": "Root=1-642422c4-0cd0d33c14acd3b11b7a4152"
+    }, 
+    "json": null, 
+    "method": "PUT", 
+    "origin": "143.107.231.30", 
+    "url": "https://httpbin.org/anything"
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo tabelas</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+        }
+
+        th,
+        td {
+            padding: 7px;
+        }
+
+        .nome {
+            background-color: red;
+        }
+
+        .email {
+            background-color: blue;
+        }
+
+        .ra {
+            background-color: yellow;
+        }
+
+        .curso {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aprendendo sobre tabelas</h1>
+    <table>
+        <caption>Cadastro de alunos</caption>
+        <colgroup>
+            <col class="nome">
+            <col class="email">
+            <col class="ra">
+            <col class="curso">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nome:</th>
+                <th>E-mail:</th>
+                <th>RA:</th>
+                <th>Curso:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana Cristina</td>
+                <td>anaxxxxx@email.com</td>
+                <td>1209092</td>
+                <td rowspan="2">Ciências da Computação</td>
+            </tr>
+            <tr>
+                <td>Maria Cristina</td>
+                <td>mariacristina@email.com</td>
+                <td>2909021</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    Total: 2
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

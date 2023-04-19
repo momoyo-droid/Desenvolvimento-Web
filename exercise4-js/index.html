@@ -1,0 +1,76 @@
+<!-- Ana Cristina Silva de Oliveira 11965630
+Paulo Henrique dos Santos Almeida 12543926
+Turma 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Calculator</title>
+    <script>
+        let num1, num2, result, operation;
+        function pegar1(){
+            num1 = Number(document.getElementById('num1').value);
+        }
+
+        function pegar2() {
+            num2 = Number(document.getElementById('num2').value);
+        }
+
+        function performOperation(num1, num2, operation) {
+            switch (operation) {
+                case "add":
+                    console.log(num1 + num2);
+                    break;
+                case "subtract":
+                    console.log(num1 - num2);
+                    break;
+                case "multiply":
+                    console.log(num1 * num2);
+                    break;
+                case "divide":
+                    if (num2 == 0) {
+                        console.log("Não é poss)ível realizar divisão por zero! Tente outro valor");
+                    }
+                default:
+                    break;
+            }
+            
+        }
+    </script>
+    <style>
+        
+        .calculator_container {
+            display: flex;
+            flex-direction: column;
+            width:300px;
+            height: 100px;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator_container">
+        <div class="num1_container">
+        
+            <h1>Simple Calculator</h1>
+            <input id="num1" type="number" placeholder="num1">
+            <input type="submit" value="Enviar" onclick="pegar1()">
+        
+        </div>
+        <div class="num2_container">
+            <input id="num2" type="number" placeholder="num2">
+            <input type="submit" value="Enviar" onclick="pegar2()">
+        
+        </div>
+        <div class="buttons_container">
+            <button id="add" onclick="performOperation(num1,num2,'add')">+</button>
+            <button id="subtract" onclick="performOperation(num1,num2,'subtract')">-</button>
+            <button id="multiply" onclick="performOperation(num1,num2,'multiply')">*</button>
+            <button id="divide" onclick="performOperation(num1,num2,'divide')">/</button>
+        </div>
+    </div>
+</body>
+</html>

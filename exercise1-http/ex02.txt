@@ -1,0 +1,40 @@
+GET https://httpbin.org/anything: {
+ 
+  "Request Headers": {
+    "user-agent": "PostmanRuntime/7.31.1",
+    "accept": "*/*",
+    "cache-control": "no-cache",
+    "postman-token": "025c0ab0-698d-4ada-b137-88794d1175bc",
+    "host": "httpbin.org",
+    "accept-encoding": "gzip, deflate, br",
+    "connection": "keep-alive"
+  },
+  "Response Headers": {
+    "date": "Mon, 27 Mar 2023 21:35:44 GMT",
+    "content-type": "application/json",
+    "content-length": "495",
+    "connection": "keep-alive",
+    "server": "gunicorn/19.9.0",
+    "access-control-allow-origin": "*",
+    "access-control-allow-credentials": "true"
+  },
+  "Response Body": "{
+    "args": {}, 
+    "data": "", 
+    "files": {}, 
+    "form": {}, 
+    "headers": {
+        "Accept": "*/*", 
+        "Accept-Encoding": "gzip, deflate, br", 
+        "Cache-Control": "no-cache", 
+        "Host": "httpbin.org", 
+        "Postman-Token": "025c0ab0-698d-4ada-b137-88794d1175bc", 
+        "User-Agent": "PostmanRuntime/7.31.1", 
+        "X-Amzn-Trace-Id": "Root=1-64220c30-2b69449b589778aa0bf281b2"
+    }, 
+    "json": null, 
+    "method": "GET", 
+    "origin": "177.34.168.190", 
+    "url": "https://httpbin.org/anything"
+    }"
+}

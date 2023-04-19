@@ -1,0 +1,131 @@
+GET https://httpbin.org/status/404: {
+  "Network": {
+    "addresses": {
+      "local": {
+        "address": "172.26.136.135",
+        "family": "IPv4",
+        "port": 35482
+      },
+      "remote": {
+        "address": "52.86.68.46",
+        "family": "IPv4",
+        "port": 443
+      }
+    },
+    "tls": {
+      "reused": false,
+      "authorized": true,
+      "authorizationError": null,
+      "cipher": {
+        "name": "ECDHE-RSA-AES128-GCM-SHA256",
+        "standardName": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+        "version": "TLSv1/SSLv3"
+      },
+      "protocol": "TLSv1.2",
+      "ephemeralKeyInfo": {},
+      "peerCertificate": {
+        "subject": {
+          "commonName": "httpbin.org",
+          "alternativeNames": "DNS:httpbin.org, DNS:*.httpbin.org"
+        },
+        "issuer": {
+          "country": "US",
+          "organization": "Amazon",
+          "commonName": "Amazon RSA 2048 M02"
+        },
+        "validFrom": "Mar  1 00:00:00 2023 GMT",
+        "validTo": "Nov 19 23:59:59 2023 GMT",
+        "fingerprint": "22:6E:AC:E3:C9:9C:47:AF:D4:53:CE:CC:A4:EC:F0:A2:E5:30:D7:62",
+        "serialNumber": "04c69744e59e63942cf626f0c6d7ac54"
+      }
+    }
+  },
+  "Request Headers": {
+    "panda": "elephant",
+    "user-agent": "PostmanRuntime/7.31.1",
+    "accept": "*/*",
+    "cache-control": "no-cache",
+    "postman-token": "08ee64c3-88b6-457e-8ffd-6864c88057e3",
+    "host": "httpbin.org",
+    "accept-encoding": "gzip, deflate, br",
+    "connection": "keep-alive"
+  },
+  "Request Body": "",
+  "Response Headers": {
+    "date": "Wed, 29 Mar 2023 11:45:21 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "content-length": "0",
+    "connection": "keep-alive",
+    "server": "gunicorn/19.9.0",
+    "access-control-allow-origin": "*",
+    "access-control-allow-credentials": "true"
+  }
+}
+
+
+--------------------------------------------------------
+GET https://httpbin.org/status/200: {
+  "Network": {
+    "addresses": {
+      "local": {
+        "address": "172.26.136.135",
+        "family": "IPv4",
+        "port": 35482
+      },
+      "remote": {
+        "address": "52.86.68.46",
+        "family": "IPv4",
+        "port": 443
+      }
+    },
+    "tls": {
+      "reused": false,
+      "authorized": true,
+      "authorizationError": null,
+      "cipher": {
+        "name": "ECDHE-RSA-AES128-GCM-SHA256",
+        "standardName": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+        "version": "TLSv1/SSLv3"
+      },
+      "protocol": "TLSv1.2",
+      "ephemeralKeyInfo": {},
+      "peerCertificate": {
+        "subject": {
+          "commonName": "httpbin.org",
+          "alternativeNames": "DNS:httpbin.org, DNS:*.httpbin.org"
+        },
+        "issuer": {
+          "country": "US",
+          "organization": "Amazon",
+          "commonName": "Amazon RSA 2048 M02"
+        },
+        "validFrom": "Mar  1 00:00:00 2023 GMT",
+        "validTo": "Nov 19 23:59:59 2023 GMT",
+        "fingerprint": "22:6E:AC:E3:C9:9C:47:AF:D4:53:CE:CC:A4:EC:F0:A2:E5:30:D7:62",
+        "serialNumber": "04c69744e59e63942cf626f0c6d7ac54"
+      }
+    }
+  },
+  "Request Headers": {
+    "panda": "elephant",
+    "user-agent": "PostmanRuntime/7.31.1",
+    "accept": "*/*",
+    "cache-control": "no-cache",
+    "postman-token": "726e252d-64b8-4856-b6c6-0cbac528e168",
+    "host": "httpbin.org",
+    "accept-encoding": "gzip, deflate, br",
+    "connection": "keep-alive"
+  },
+  "Request Body": "",
+  "Response Headers": {
+    "date": "Wed, 29 Mar 2023 11:46:02 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "content-length": "0",
+    "connection": "keep-alive",
+    "server": "gunicorn/19.9.0",
+    "access-control-allow-origin": "*",
+    "access-control-allow-credentials": "true"
+  }
+}
+
+Os status de ambas as requisições são mostradas no console.

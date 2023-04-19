@@ -1,0 +1,42 @@
+POST https://httpbin.org/anything: {
+  
+  "Request Headers": {
+    "user-agent": "PostmanRuntime/7.31.1",
+    "accept": "*/*",
+    "cache-control": "no-cache",
+    "postman-token": "3e36ae0b-ea34-40af-a4cb-35de6b7bf576",
+    "host": "httpbin.org",
+    "accept-encoding": "gzip, deflate, br",
+    "connection": "keep-alive",
+    "content-length": "0"
+  },
+  "Response Headers": {
+    "date": "Mon, 27 Mar 2023 21:38:08 GMT",
+    "content-type": "application/json",
+    "content-length": "524",
+    "connection": "keep-alive",
+    "server": "gunicorn/19.9.0",
+    "access-control-allow-origin": "*",
+    "access-control-allow-credentials": "true"
+  },
+  "Response Body": {
+    "args": {}, 
+    "data": "", 
+    "files": {}, 
+    "form": {}, 
+    "headers": {
+        "Accept": "*/*", 
+        "Accept-Encoding": "gzip, deflate, br", 
+        "Cache-Control": "no-cache", 
+        "Content-Length": "0", 
+        "Host": "httpbin.org", 
+        "Postman-Token": "3e36ae0b-ea34-40af-a4cb-35de6b7bf576", 
+        "User-Agent": "PostmanRuntime/7.31.1", 
+        "X-Amzn-Trace-Id": "Root=1-64220cc0-6698c002547a20f076bd9e47"
+    }, 
+    "json": null, 
+    "method": "POST", 
+    "origin": "177.34.168.190", 
+    "url": "https://httpbin.org/anything"
+    }
+}
