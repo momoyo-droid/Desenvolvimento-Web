@@ -1,0 +1,46 @@
+<!-- Ana Cristina Silva de Oliveira - 11965630 
+Paulo Henrique dos Santos Almeida - 12543926
+Turma 2 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Activity</title>
+</head>
+
+<body>
+    <h1>DOM Manipulation Activity</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <!-- <p style="background-color: yellow;">Paragraph 2</p> -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <!-- <li>Item 4</li> -->
+    </ul>
+    <!-- <img src="https://via.placeholder.com/200" alt="Placeholder Image"> -->
+    <img src="https://via.placeholder.com/100" alt="Placeholder Image">
+
+    <button id="taskButton">Perform Task</button>
+</body>
+<script>
+    document.getElementById("taskButton").addEventListener("click", function () {
+        document.getElementsByTagName("p")[0].textContent = "New Paragraph 1"
+        var ul = document.getElementsByTagName("ul")[0]
+        var li = document.createElement("li")
+        li.appendChild(document.createTextNode("Item 4"))
+        ul.appendChild(li)
+        var image = document.getElementsByTagName("img")[0]
+        image.src = " https://via.placeholder.com/200"
+        var p2 = document.getElementsByTagName("p")[1]
+        p2.style.backgroundColor = "yellow"
+        document.getElementsByTagName("p")[0].addEventListener("click", function () {
+            document.getElementsByTagName("p")[0].textContent = "Clicked!"
+        })
+    })
+</script>
+
+</html>
