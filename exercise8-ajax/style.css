@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: white;
+}
+
+.card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:green;
+}
+
+#get-joke {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#get-joke:hover {
+    background-color: #3e8e41;
+}
+
+.joke-card {
+    background-color: #ffef00;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px white;
+    font-size: 24px;
+}
+
+#img-gif{
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+}

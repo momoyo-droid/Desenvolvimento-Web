@@ -1,0 +1,53 @@
+<!-- ANA CRISTINA SILVA DE OLIVEIRA 11965630
+PAULO HENRIQUE DOS SANTOS ALMEIDA 12543926 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Piadas</title>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Gerador de Piadas</h1>
+        <button id="get-joke">Gerar Piada</button>
+        <div class="joke-card"></div>
+        <div class="image">
+            <img id="img-gif">
+        </div>
+    </div>
+    <script>
+        const button = document.getElementById('get-joke');
+        const jokeCard = document.getElementsByClassName('joke-card')[0];
+        
+        button.addEventListener("click", function() {
+            button.textContent = "Carregando piadinha... 😂"
+            document.getElementById("img-gif").src = "dance.gif"
+
+            fetch('https://official-joke-api.appspot.com/jokes/programming/random')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar piadinha... 🥲');
+                    }
+                   
+                    return response.json();
+                })
+                .then(data => {
+                    jokeCard.innerHTML = `<p>${data[0].setup}</p><p>${data[0].punchline}</p>`;
+                    button.textContent = "Gerar piada"
+
+                })
+                .catch(error => {
+                    jokeCard.innerText = 'Erro ao carregar piadinha... 🥲';
+                    console.error(error);
+                });
+        });
+    </script>
+</body>
+
+</html>

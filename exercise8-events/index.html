@@ -1,0 +1,137 @@
+<!-- ANA CRISITNA SILVA DE OLIVERA 11965630
+PAULO H DOS SANTOS ALMEIDA 12543926 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <style>
+        #buttons_container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            /* border: 1px red solid; */
+            width: 300px;
+            height: 150px;
+        }
+
+        #next  button, #submit button {
+            width: 100px;
+            height: 50px;
+        }
+        #answers_container {
+            text-align:justify;
+            padding-left: 30px;
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="quiz_container">
+        <h1 id="question_presentation">
+            Question:
+        </h1>
+        <p id="question_text">
+            Teste
+        </p>
+    </div>
+    <div id="answers_container">
+        <p class="answers_text" id="a1">Resposta 1</p>
+        <p class="answers_text" id="a2">Resposta 2</p>
+        <p class="answers_text" id="a3">Resposta 3</p>
+    </div>
+    <div id="answers_buttons_container">
+        <button class="answers_buttons" id="b1" onclick="checkAnswer(1)">Resposta 1</button>
+        <button class="answers_buttons" id="b2" onclick="checkAnswer(2)">Resposta 2</button>
+        <button class="answers_buttons" id="b3" onclick="checkAnswer(3)">Resposta 3</button>
+    </div>
+    <div id="counter_text">
+        <p id="counter">Questões respondidas: 0 de um total de 3.</p>
+    </div>
+    <div id="buttons_container">
+        <div id="next">
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+        <div id="submit">
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+<script defer>
+    'use strict';
+        const questionsList = [
+    {
+        question: "Quem é o professor de Web do BCC?",
+        answers: ["Dilvan", "Dilvano", "Silvano"],
+        correctAnswer: "Dilvan"
+    },
+    {
+        question: "Em qual cidade fica a USP São Carlos?",
+        answers: ["Jardim Lutfalla", "São Paulo", "São Carlos"],
+        correctAnswer: "São Carlos"
+    },
+    {
+        question: "Em League of Legends, qual a resposta da campeã Katarina para a pergunta por quê?",
+        answers: ["Porque eu quero", "Porque eu posso", "Porque sim"],
+        correctAnswer: "Porque eu posso"
+    }
+    ];
+
+    var rightAnswer = [false, false, false];
+    var correctQuestions = 0;
+    var answer_number = 0;
+    var question_number = -1;
+    var chooseQuestion = document.getElementById('question_text');
+    var text_answer = 0;
+    var answered = [false, false, false];
+    chooseQuestion.innerHTML = questionsList[question_number + 1].question;
+
+    function nextQuestion (){
+        question_number++;
+        if (question_number >= 3){
+            alert('Essa é a última questão! Aperte submit para enviar o resultado');
+        } else{
+            chooseQuestion.innerHTML = questionsList[question_number].question;
+            for (var i = 0; i < 3; i++) {
+                document.getElementsByClassName('answers_buttons')[i].attributeStyleMap.clear();
+                text_answer = (i + 1) + ' - ' + questionsList[question_number].answers[i];
+                document.getElementsByClassName('answers_text')[i].innerHTML = text_answer;
+            };
+        };
+    }
+    
+    function checkAnswer (number){
+        if (answered[question_number] === false) {
+            var answerPicked = questionsList[question_number].answers[number-1];
+            document.getElementsByClassName('answers_buttons')[number-1].style.backgroundColor = "lightyellow";
+            document.getElementsByClassName('answers_buttons')[number-1].style.fontWeight = "bold";
+            document.getElementById('counter').innerHTML = 'Questões respondidas: ' + (question_number + 1) + ' de um total de 3.';
+            if (answerPicked === questionsList[question_number].correctAnswer){
+                rightAnswer[question_number] = true;
+                correctQuestions++;
+            }
+            answered[question_number] = true;
+        }
+    }
+
+    const submit_button = document.getElementById("submit");
+
+    function displayResult(event) {
+        alert('Você acertou ' + correctQuestions + ' questões de um total de 3 questoes.');
+    }
+    
+    submit_button.addEventListener("click", function() {
+        const event = new CustomEvent("displayResult");
+        submit_button.dispatchEvent(event);
+    });
+
+    submit_button.addEventListener("displayResult", displayResult);
+
+    window.addEventListener("load", (event) => { nextQuestion(); }); 
+</script>
+</html>

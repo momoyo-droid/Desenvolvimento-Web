@@ -1,0 +1,37 @@
+<!-- Ana Cristina Silva de Oliveira 11965630 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM II</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="input-task">
+        <h1>Lista de Tarefas</h1>
+        <input class="inp" type="text" placeholder="Digite o nome da nova tarefa"
+            x-moz-errormessage="Por favor, especifique uma nova tarefa.">
+        <img class="bg1" src="bg1.gif" alt="background-page">
+        <button id="taskButton" type="submit">Enviar</button>
+        <button>Ver lista</button>
+        <ul>
+            <li>Tarefa 1</li>
+        </ul>
+    </div>
+    <script>
+        var task = document.getElementsByTagName("input")[0]
+        document.getElementById("taskButton").addEventListener("click", function () {
+            var ul = document.getElementsByTagName("ul")[0]
+            var li = document.createElement("li")
+            li.appendChild(document.createTextNode(task.value))
+            ul.appendChild(li)
+
+        })
+    </script>
+</body>
+
+</html>

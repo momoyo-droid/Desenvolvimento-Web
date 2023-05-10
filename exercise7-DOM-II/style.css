@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Tenor+Sans&family=Vidaloka&display=swap');
+
+body {
+    display: flex;
+    /* background-color: white;
+    border: 10px ridge black; */
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.input-task {
+    justify-content: center;
+    height: 100px;
+    padding: 850px;
+}
+
+.inp{
+    height: 30px;
+}
+
+button{
+    height: 35px;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.bg1{
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
